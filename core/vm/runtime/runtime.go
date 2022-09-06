@@ -21,12 +21,12 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/rawdb"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/state"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/vm"
+	"github.com/coming-chat/go-ethereum-arbitrum/crypto"
+	"github.com/coming-chat/go-ethereum-arbitrum/params"
 )
 
 // Config is a basic type specifying certain configuration flags for running

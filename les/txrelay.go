@@ -21,9 +21,9 @@ import (
 	"math/rand"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/types"
+	"github.com/coming-chat/go-ethereum-arbitrum/rlp"
 )
 
 type lesTxRelay struct {

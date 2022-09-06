@@ -19,10 +19,10 @@ package trie
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/types"
+	"github.com/coming-chat/go-ethereum-arbitrum/log"
+	"github.com/coming-chat/go-ethereum-arbitrum/rlp"
 )
 
 // SecureTrie wraps a trie with key hashing. In a secure trie, all

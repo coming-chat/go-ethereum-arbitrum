@@ -20,8 +20,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/types"
+	"github.com/coming-chat/go-ethereum-arbitrum/rlp"
 )
 
 func decodeEncode(input []byte, val interface{}, i int) {

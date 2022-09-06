@@ -26,17 +26,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/internal/ethapi"
-	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/ethereum/go-ethereum/signer/core"
-	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/ethereum/go-ethereum/signer/fourbyte"
-	"github.com/ethereum/go-ethereum/signer/storage"
+	"github.com/coming-chat/go-ethereum-arbitrum/accounts"
+	"github.com/coming-chat/go-ethereum-arbitrum/accounts/keystore"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/common/hexutil"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/types"
+	"github.com/coming-chat/go-ethereum-arbitrum/internal/ethapi"
+	"github.com/coming-chat/go-ethereum-arbitrum/rlp"
+	"github.com/coming-chat/go-ethereum-arbitrum/signer/core"
+	"github.com/coming-chat/go-ethereum-arbitrum/signer/core/apitypes"
+	"github.com/coming-chat/go-ethereum-arbitrum/signer/fourbyte"
+	"github.com/coming-chat/go-ethereum-arbitrum/signer/storage"
 )
 
 //Used for testing

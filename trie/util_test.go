@@ -19,7 +19,7 @@ package trie
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/rawdb"
 )
 
 // Tests if the trie diffs are tracked correctly.

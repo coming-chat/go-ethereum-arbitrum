@@ -17,8 +17,8 @@
 package beacon
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/rpc"
 )
 
 // EngineAPIError is a standardized error message between consensus and execution

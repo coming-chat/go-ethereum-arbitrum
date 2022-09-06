@@ -29,10 +29,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/console/prompt"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/console/prompt"
+	"github.com/coming-chat/go-ethereum-arbitrum/core"
+	"github.com/coming-chat/go-ethereum-arbitrum/log"
 	"github.com/peterh/liner"
 	"golang.org/x/term"
 )

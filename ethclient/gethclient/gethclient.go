@@ -23,12 +23,12 @@ import (
 	"runtime"
 	"runtime/debug"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/coming-chat/go-ethereum-arbitrum"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/common/hexutil"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/types"
+	"github.com/coming-chat/go-ethereum-arbitrum/p2p"
+	"github.com/coming-chat/go-ethereum-arbitrum/rpc"
 )
 
 // Client is a wrapper around rpc.Client that implements geth-specific functionality.

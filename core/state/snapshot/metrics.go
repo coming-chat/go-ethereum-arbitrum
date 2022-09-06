@@ -16,7 +16,7 @@
 
 package snapshot
 
-import "github.com/ethereum/go-ethereum/metrics"
+import "github.com/coming-chat/go-ethereum-arbitrum/metrics"
 
 // Metrics in generation
 var (

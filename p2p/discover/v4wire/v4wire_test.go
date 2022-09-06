@@ -22,9 +22,9 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/coming-chat/go-ethereum-arbitrum/crypto"
+	"github.com/coming-chat/go-ethereum-arbitrum/rlp"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
 )
 
 // EIP-8 test vectors.

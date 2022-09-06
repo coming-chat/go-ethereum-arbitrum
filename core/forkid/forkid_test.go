@@ -22,9 +22,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/params"
+	"github.com/coming-chat/go-ethereum-arbitrum/rlp"
 )
 
 // TestCreation tests that different genesis and fork rule combinations result in

@@ -21,8 +21,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/common/prque"
+	"github.com/coming-chat/go-ethereum-arbitrum/common/mclock"
+	"github.com/coming-chat/go-ethereum-arbitrum/common/prque"
 )
 
 // servingQueue allows running tasks in a limited number of threads and puts the

@@ -26,7 +26,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common/math"
+	"github.com/coming-chat/go-ethereum-arbitrum/common/math"
 )
 
 type testEncoder struct {

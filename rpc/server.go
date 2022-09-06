@@ -21,8 +21,8 @@ import (
 	"io"
 	"sync/atomic"
 
+	"github.com/coming-chat/go-ethereum-arbitrum/log"
 	mapset "github.com/deckarep/golang-set"
-	"github.com/ethereum/go-ethereum/log"
 )
 
 const MetadataApi = "rpc"

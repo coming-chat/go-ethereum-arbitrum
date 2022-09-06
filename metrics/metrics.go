@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/coming-chat/go-ethereum-arbitrum/log"
 )
 
 // Enabled is checked by the constructor functions for all of the

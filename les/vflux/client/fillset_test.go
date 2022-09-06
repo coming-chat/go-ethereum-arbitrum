@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/enr"
-	"github.com/ethereum/go-ethereum/p2p/nodestate"
+	"github.com/coming-chat/go-ethereum-arbitrum/common/mclock"
+	"github.com/coming-chat/go-ethereum-arbitrum/p2p/enode"
+	"github.com/coming-chat/go-ethereum-arbitrum/p2p/enr"
+	"github.com/coming-chat/go-ethereum-arbitrum/p2p/nodestate"
 )
 
 type testIter struct {

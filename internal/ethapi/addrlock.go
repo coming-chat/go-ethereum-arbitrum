@@ -19,7 +19,7 @@ package ethapi
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
 )
 
 type AddrLocker struct {

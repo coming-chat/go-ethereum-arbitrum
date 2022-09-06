@@ -19,7 +19,7 @@ package types
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
 )
 
 //go:generate go run ../../rlp/rlpgen -type StateAccount -out gen_account_rlp.go

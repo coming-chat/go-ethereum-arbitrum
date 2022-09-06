@@ -19,7 +19,7 @@ package params
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
 )
 
 type ArbitrumChainParams struct {

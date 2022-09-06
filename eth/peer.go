@@ -19,8 +19,8 @@ package eth
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/eth/protocols/eth"
-	"github.com/ethereum/go-ethereum/eth/protocols/snap"
+	"github.com/coming-chat/go-ethereum-arbitrum/eth/protocols/eth"
+	"github.com/coming-chat/go-ethereum-arbitrum/eth/protocols/snap"
 )
 
 // ethPeerInfo represents a short summary of the `eth` sub-protocol metadata known

@@ -19,9 +19,9 @@ package js
 import (
 	"math/big"
 
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/vm"
 	"github.com/dop251/goja"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/vm"
 )
 
 func (jst *jsTracer) CaptureArbitrumTransfer(

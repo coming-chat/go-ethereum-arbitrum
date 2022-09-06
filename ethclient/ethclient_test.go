@@ -26,18 +26,18 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/coming-chat/go-ethereum-arbitrum"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/consensus/ethash"
+	"github.com/coming-chat/go-ethereum-arbitrum/core"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/rawdb"
+	"github.com/coming-chat/go-ethereum-arbitrum/core/types"
+	"github.com/coming-chat/go-ethereum-arbitrum/crypto"
+	"github.com/coming-chat/go-ethereum-arbitrum/eth"
+	"github.com/coming-chat/go-ethereum-arbitrum/eth/ethconfig"
+	"github.com/coming-chat/go-ethereum-arbitrum/node"
+	"github.com/coming-chat/go-ethereum-arbitrum/params"
+	"github.com/coming-chat/go-ethereum-arbitrum/rpc"
 )
 
 // Verify that Client implements the ethereum interfaces.
@@ -248,7 +248,7 @@ func generateTestChain() []*types.Block {
 			g.AddTx(testTx2)
 		}
 	}
-	gblock := genesis.ToBlock(db)
+	gblock := genesis.ToBlock()
 	engine := ethash.NewFaker()
 	blocks, _ := core.GenerateChain(genesis.Config, gblock, engine, db, 2, generate)
 	blocks = append([]*types.Block{gblock}, blocks...)
@@ -261,6 +261,7 @@ func TestEthClient(t *testing.T) {
 	defer backend.Close()
 	defer client.Close()
 
+	testTransactionInBlockInterrupted(t, client)
 	tests := map[string]struct {
 		test func(t *testing.T)
 	}{

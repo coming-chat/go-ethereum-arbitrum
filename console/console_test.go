@@ -25,15 +25,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	"github.com/ethereum/go-ethereum/console/prompt"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/eth"
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/internal/jsre"
-	"github.com/ethereum/go-ethereum/miner"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/coming-chat/go-ethereum-arbitrum/common"
+	"github.com/coming-chat/go-ethereum-arbitrum/consensus/ethash"
+	"github.com/coming-chat/go-ethereum-arbitrum/console/prompt"
+	"github.com/coming-chat/go-ethereum-arbitrum/core"
+	"github.com/coming-chat/go-ethereum-arbitrum/eth"
+	"github.com/coming-chat/go-ethereum-arbitrum/eth/ethconfig"
+	"github.com/coming-chat/go-ethereum-arbitrum/internal/jsre"
+	"github.com/coming-chat/go-ethereum-arbitrum/miner"
+	"github.com/coming-chat/go-ethereum-arbitrum/node"
 )
 
 const (
