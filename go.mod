@@ -1,4 +1,4 @@
-module github.com/coming-chat/go-ethereum-arbitrum/go-ethereum
+module github.com/coming-chat/go-ethereum-arbitrum
 
 go 1.17
 
