@@ -716,6 +716,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 		inner = &ZksyncUnsignTxData{
 			LegacyTx:     itx,
 			HashOverride: dec.Hash,
+			TxType:       byte(dec.Type),
 		}
 
 	default:

@@ -418,6 +418,8 @@ func (tx *Transaction) Hash() common.Hash {
 		h = rlpHash(tx.inner)
 	} else if tx.Type() == ArbitrumLegacyTxType {
 		h = tx.inner.(*ArbitrumLegacyTxData).HashOverride
+	} else if tx.Type() == ZksyncEIP712TxType || tx.Type() == ZksyncFFTxType {
+		h = tx.inner.(*ZksyncUnsignTxData).HashOverride
 	} else {
 		h = prefixedRlpHash(tx.Type(), tx.inner)
 	}
