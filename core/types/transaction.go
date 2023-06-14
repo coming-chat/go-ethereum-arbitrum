@@ -53,6 +53,8 @@ const (
 	ArbitrumInternalTxType        = 106
 	ArbitrumLegacyTxType          = 120
 	OptimismLegacyTxType          = 126 // 2023-06-06 update
+	ZksyncEIP712TxType            = 113
+	ZksyncFFTxType                = 255 // 0xff
 )
 
 // Transaction is an Ethereum transaction.
