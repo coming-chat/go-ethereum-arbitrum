@@ -726,11 +726,20 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 	// Now set the inner transaction.
 	t.setDecoded(inner, 0)
 
+	if isZksyncChainId(dec.ChainID) {
+		// set t.hash for zksync era
+		t.hash.Store(dec.Hash)
+	}
+
 	// TODO: check hash here?
 	return nil
 }
 
 func ignoreCheckSign(chainId *hexutil.Big) bool {
+	return isZksyncChainId(chainId)
+}
+
+func isZksyncChainId(chainId *hexutil.Big) bool {
 	if nil == chainId {
 		return false
 	}
