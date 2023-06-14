@@ -261,7 +261,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 		}
 		itx.S = (*big.Int)(dec.S)
 		withSignature := itx.V.Sign() != 0 || itx.R.Sign() != 0 || itx.S.Sign() != 0
-		if withSignature && !ignoreCheckSign(dec.ChainID.ToInt()) {
+		if withSignature && !ignoreCheckSign(dec.ChainID) {
 			if err := sanityCheckSignature(itx.V, itx.R, itx.S, true); err != nil {
 				return err
 			}
@@ -314,7 +314,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 		}
 		itx.S = (*big.Int)(dec.S)
 		withSignature := itx.V.Sign() != 0 || itx.R.Sign() != 0 || itx.S.Sign() != 0
-		if withSignature && !ignoreCheckSign(dec.ChainID.ToInt()) {
+		if withSignature && !ignoreCheckSign(dec.ChainID) {
 			if err := sanityCheckSignature(itx.V, itx.R, itx.S, false); err != nil {
 				return err
 			}
@@ -371,7 +371,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 		}
 		itx.S = (*big.Int)(dec.S)
 		withSignature := itx.V.Sign() != 0 || itx.R.Sign() != 0 || itx.S.Sign() != 0
-		if withSignature && !ignoreCheckSign(dec.ChainID.ToInt()) {
+		if withSignature && !ignoreCheckSign(dec.ChainID) {
 			if err := sanityCheckSignature(itx.V, itx.R, itx.S, false); err != nil {
 				return err
 			}
@@ -729,8 +729,11 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 	return nil
 }
 
-func ignoreCheckSign(chainId *big.Int) bool {
-	cid := chainId.Uint64()
+func ignoreCheckSign(chainId *hexutil.Big) bool {
+	if nil == chainId {
+		return false
+	}
+	cid := chainId.ToInt().Uint64()
 	return cid == 324 || // zksync era
 		cid == 280 // zksync era test
 }
