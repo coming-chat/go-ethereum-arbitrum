@@ -23,7 +23,6 @@ import (
 
 	"github.com/coming-chat/go-ethereum-arbitrum/common"
 	"github.com/coming-chat/go-ethereum-arbitrum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/types"
 )
 
 // txJSON is the JSON representation of transactions.
@@ -731,7 +730,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 		// set t.hash for zksync era
 		t.hash.Store(dec.Hash)
 		if dec.From != nil {
-			t.from.Store(sigCache{signer: types.NewLondonSigner(t.ChainId()), from: *dec.From})
+			t.from.Store(sigCache{signer: NewLondonSigner(t.ChainId()), from: *dec.From})
 		}
 	}
 
