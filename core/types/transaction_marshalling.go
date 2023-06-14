@@ -729,9 +729,6 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 	if isZksyncChainId(dec.ChainID) {
 		// set t.hash for zksync era
 		t.hash.Store(dec.Hash)
-		if dec.From != nil {
-			t.from.Store(sigCache{signer: NewLondonSigner(t.ChainId()), from: *dec.From})
-		}
 	}
 
 	// TODO: check hash here?
