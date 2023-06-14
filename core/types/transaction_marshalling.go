@@ -313,9 +313,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 			}
 		}
 
-	case DynamicFeeTxType:
-	case ZksyncEIP712TxType:
-	case ZksyncFFTxType:
+	case DynamicFeeTxType, ZksyncEIP712TxType, ZksyncFFTxType:
 		var itx DynamicFeeTx
 		inner = &itx
 		// Access list is optional for now.
