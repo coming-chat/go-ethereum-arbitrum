@@ -320,7 +320,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 			}
 		}
 
-	case DynamicFeeTxType, ZksyncEIP712TxType:
+	case DynamicFeeTxType:
 		var itx DynamicFeeTx
 		inner = &itx
 		// Access list is optional for now.
@@ -688,7 +688,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 			HashOverride: dec.Hash,
 		}
 
-	case ZksyncFFTxType:
+	case ZksyncFFTxType, ZksyncEIP712TxType:
 		var itx LegacyTx
 		if dec.To != nil {
 			itx.To = dec.To
