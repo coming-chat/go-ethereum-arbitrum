@@ -713,9 +713,6 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 			return errors.New("missing required field 'input' in transaction")
 		}
 		itx.Data = *dec.Data
-		if dec.V == nil {
-			return errors.New("missing required field 'v' in transaction")
-		}
 		inner = &ZksyncUnsignTxData{
 			LegacyTx:     itx,
 			HashOverride: dec.Hash,
