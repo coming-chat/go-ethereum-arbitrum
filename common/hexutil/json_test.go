@@ -128,8 +128,6 @@ var unmarshalBigTests = []unmarshalTest{
 	// invalid encoding
 	{input: "", wantErr: errJSONEOF},
 	{input: "null", wantErr: errNonString(bigT)},
-	{input: "10", wantErr: errNonString(bigT)},
-	{input: `"0"`, wantErr: wrapTypeError(ErrMissingPrefix, bigT)},
 	{input: `"0x"`, wantErr: wrapTypeError(ErrEmptyNumber, bigT)},
 	{input: `"0x01"`, wantErr: wrapTypeError(ErrLeadingZero, bigT)},
 	{input: `"0xx"`, wantErr: wrapTypeError(ErrSyntax, bigT)},
@@ -141,6 +139,8 @@ var unmarshalBigTests = []unmarshalTest{
 
 	// valid encoding
 	{input: `""`, want: big.NewInt(0)},
+	{input: `10`, want: big.NewInt(10)},
+	{input: `0`, want: big.NewInt(0)},
 	{input: `"0x0"`, want: big.NewInt(0)},
 	{input: `"0x2"`, want: big.NewInt(0x2)},
 	{input: `"0x2F2"`, want: big.NewInt(0x2f2)},

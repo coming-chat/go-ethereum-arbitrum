@@ -158,8 +158,18 @@ func (b Big) MarshalText() ([]byte, error) {
 
 // UnmarshalJSON implements json.Unmarshaler.
 func (b *Big) UnmarshalJSON(input []byte) error {
+	if len(input) == 0 {
+		return ErrEmptyString
+	}
 	if !isString(input) {
-		return errNonString(bigT)
+		// maybe number
+		t, success := new(big.Int).SetString(string(input), 0)
+		if !success {
+			return errNonString(bigT)
+		} else {
+			(*big.Int)(b).Set(t)
+			return nil
+		}
 	}
 	return wrapTypeError(b.UnmarshalText(input[1:len(input)-1]), bigT)
 }
