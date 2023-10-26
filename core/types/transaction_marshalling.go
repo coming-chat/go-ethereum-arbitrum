@@ -606,9 +606,9 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 		if dec.Gas == nil {
 			return errors.New("missing required field 'gas' in txdata")
 		}
-		if dec.RetryTo == nil {
-			return errors.New("missing required field 'retryTo' in txdata")
-		}
+		// if dec.RetryTo == nil {
+		// 	return errors.New("missing required field 'retryTo' in txdata")
+		// }
 		if dec.Beneficiary == nil {
 			return errors.New("missing required field 'beneficiary' in transaction")
 		}
