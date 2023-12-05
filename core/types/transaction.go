@@ -55,6 +55,7 @@ const (
 	OptimismLegacyTxType          = 126 // 2023-06-06 update
 	ZksyncEIP712TxType            = 113
 	ZksyncFFTxType                = 255 // 0xff
+	ZksyncFETxType                = 254 // 0xfe
 )
 
 // Transaction is an Ethereum transaction.
@@ -418,7 +419,7 @@ func (tx *Transaction) Hash() common.Hash {
 		h = rlpHash(tx.inner)
 	} else if tx.Type() == ArbitrumLegacyTxType {
 		h = tx.inner.(*ArbitrumLegacyTxData).HashOverride
-	} else if tx.Type() == ZksyncEIP712TxType || tx.Type() == ZksyncFFTxType {
+	} else if tx.Type() == ZksyncEIP712TxType || tx.Type() == ZksyncFFTxType || tx.Type() == ZksyncFETxType {
 		h = tx.inner.(*ZksyncUnsignTxData).HashOverride
 	} else {
 		h = prefixedRlpHash(tx.Type(), tx.inner)

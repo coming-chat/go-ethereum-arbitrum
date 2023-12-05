@@ -688,7 +688,7 @@ func (t *Transaction) UnmarshalJSON(input []byte) error {
 			HashOverride: dec.Hash,
 		}
 
-	case ZksyncFFTxType, ZksyncEIP712TxType:
+	case ZksyncFFTxType, ZksyncEIP712TxType, ZksyncFETxType:
 		var itx LegacyTx
 		if dec.To != nil {
 			itx.To = dec.To
