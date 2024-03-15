@@ -45,6 +45,7 @@ const (
 	LegacyTxType = iota
 	AccessListTxType
 	DynamicFeeTxType
+	BlobTxType
 	ArbitrumDepositTxType         = 100
 	ArbitrumUnsignedTxType        = 101
 	ArbitrumContractTxType        = 102
